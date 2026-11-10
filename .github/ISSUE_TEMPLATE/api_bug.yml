@@ -1,0 +1,35 @@
+name: 🐞 API bug
+description: An API error, a wrong or missing result, a slow query, or behaviour that disagrees with the docs.
+labels: [bug, api, triage]
+body:
+  - type: markdown
+    attributes:
+      value: Issues here are public. Don't include API keys, tokens or personal data.
+  - type: dropdown
+    id: version
+    attributes:
+      label: API version
+      options: [v5, v4.2, v4.1, v4]
+    validations: { required: true }
+  - type: input
+    id: url
+    attributes:
+      label: Request URL
+      placeholder: https://fetch.theglobalfund.org/v5/odata/Grants?$filter=...
+    validations: { required: true }
+  - type: textarea
+    id: expected
+    attributes: { label: "What did you expect?" }
+    validations: { required: true }
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened instead?
+      description: HTTP status, error message or response body (trimmed).
+      render: json
+    validations: { required: true }
+  - type: input
+    id: when
+    attributes:
+      label: When (UTC), and does it happen every time?
+      placeholder: 2026-11-09 14:30 UTC, every time

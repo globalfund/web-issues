@@ -1,0 +1,21 @@
+name: 📊 Data issue
+description: A value or record that looks wrong or is missing, in the API or a download file.
+labels: [data, triage]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Request URL or download file that shows the record
+    validations: { required: true }
+  - type: input
+    id: key
+    attributes:
+      label: Record identifier
+      description: e.g. grant number, country ISO code, or the entity's key
+    validations: { required: true }
+  - type: textarea
+    id: issue
+    attributes:
+      label: What looks wrong, and what should it be?
+      description: Link to a source (report, data explorer page) if you have one.
+    validations: { required: true }

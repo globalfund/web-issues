@@ -1,0 +1,35 @@
+name: 🖥️ Website bug
+description: A page that breaks, looks wrong or is hard to use, or a download file that won't open or doesn't match its description.
+labels: [bug, website, triage]
+body:
+  - type: markdown
+    attributes:
+      value: Issues here are public. Don't include personal data.
+  - type: dropdown
+    id: page
+    attributes:
+      label: Which page?
+      options: [Home, Downloads, API Reference, Other]
+    validations: { required: true }
+  - type: input
+    id: url
+    attributes:
+      label: Page address
+      description: Copy it from the address bar, or use the file card's copy-link button.
+      placeholder: https://data-service.theglobalfund.org/downloads?category=grants/disbursements&q=kenya
+    validations: { required: true }
+  - type: textarea
+    id: steps
+    attributes:
+      label: What did you do, and what happened?
+      description: Add a screenshot if something looks wrong.
+    validations: { required: true }
+  - type: textarea
+    id: expected
+    attributes: { label: "What did you expect?" }
+    validations: { required: true }
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and device
+      placeholder: Edge 131 on Windows 11, Safari on iPhone

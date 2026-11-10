@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🔒 Report a security vulnerability
+    url: https://github.com/globalfund/web-issues/security/advisories/new
+    about: Please report security issues privately, not as a public issue.
+  - name: 💬 Ask a question
+    url: https://github.com/globalfund/web-issues/discussions
+    about: For "how do I…" questions and open-ended ideas.
+  - name: 📖 API reference
+    url: https://data-service.theglobalfund.org/api
+    about: Browse the entities, fields and query options for each version.
+  - name: 📥 Data downloads
+    url: https://data-service.theglobalfund.org/downloads
+    about: Ready-made data files, if you don't need the API.
